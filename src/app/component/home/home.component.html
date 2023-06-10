@@ -1,0 +1,213 @@
+<app-header></app-header>
+<div id="carouselExampleCaptions" class="relative h-[60vh]" data-te-carousel-init data-te-carousel-slide>
+    <!--Carousel indicators-->
+    <div class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+        data-te-carousel-indicators>
+        <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="0" data-te-carousel-active
+            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="1"
+            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+            aria-label="Slide 2"></button>
+        <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="2"
+            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+            aria-label="Slide 3"></button>
+    </div>
+
+    <!--Carousel items-->
+    <div class="relative w-full overflow-hidden after:clear-both after:block after:content-[''] h-full">
+        <!--First item-->
+        <div class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-active data-te-carousel-item style="backface-visibility: hidden">
+            <img src="https://cdn.shopify.com/s/files/1/0355/8296/7943/files/Minisforum-UM773-Lite_ECOM-SLIDING-BANNER_6c866118-d71c-4fdf-9635-52f8e715c5c0_1800x.jpg?v=1683351354"
+                class="block w-full object-fill" alt="..." />
+            <!-- <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                <h5 class="text-xl">First slide label</h5>
+                <p>
+                    Some representative placeholder content for the first slide.
+                </p>
+            </div> -->
+        </div>
+        <!--Second item-->
+        <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item style="backface-visibility: hidden">
+            <img src="https://cdn.shopify.com/s/files/1/0355/8296/7943/files/0-02-06-a8e6550d7be730e2af09292a3e7ac50bd6cefd9c9a9ce8177436e83acfd26265_3a1459a9f2fac788_1600x.jpg?v=1683190657"
+                class="block w-full" alt="..." />
+            <!-- <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                <h5 class="text-xl">Second slide label</h5>
+                <p>
+                    Some representative placeholder content for the second slide.
+                </p>
+            </div> -->
+        </div>
+        <!--Third item-->
+        <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item style="backface-visibility: hidden">
+            <img src="https://cdn.shopify.com/s/files/1/0355/8296/7943/files/AKKOECOM-SLIDING-BANNER_1800x.jpg?v=1682661939"
+                class="block w-full" alt="..." />
+            <!-- <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                <h5 class="text-xl">Third slide label</h5>
+                <p>
+                    Some representative placeholder content for the third slide.
+                </p>
+            </div> -->
+        </div>
+    </div>
+
+    <!--Carousel controls - prev item-->
+    <button
+        class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+        type="button" data-te-target="#carouselExampleCaptions" data-te-slide="prev">
+        <span class="inline-block h-8 w-8">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+        </span>
+        <span
+            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
+    </button>
+    <!--Carousel controls - next item-->
+    <button
+        class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+        type="button" data-te-target="#carouselExampleCaptions" data-te-slide="next">
+        <span class="inline-block h-8 w-8">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+        </span>
+        <span
+            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
+    </button>
+</div>
+<div class="my-4">
+    <div class="container flex justify-center mx-auto">
+        <div>
+            <h1 class="text-center mt-5">New Arrivals</h1>
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-4 ">
+                <div
+                class="relative m-10 max-w-xs overflow-hidden  bg-white border border-transparent hover:border-[#848484] hover:shadow-md transition duration-300">
+                <a routerLink="product" class="group block overflow-hidden">
+                    <!-- <img class="h-1/2 rounded-t-lg object-cover"
+                        src="https://easypc.com.ph/cdn/shop/products/4026-a_540x.jpg?v=1629741818"
+                        alt="product image" /> -->
+                    <div class="relative h-[150px] sm:h-[250px] m-2">
+                        <img src="https://www.gigabyte.com/FileUpload/Global/WebPage/768/img/9.png"
+                            alt=""
+                            class="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0" />
+                        <img src="https://www.gigabyte.com/FileUpload/Global/WebPage/768/img/5.png"
+                            alt=""
+                            class="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100" />
+                    </div>
+                </a>
+                <div class="mt-4 px-5 pb-5 font-['Inter'] text-center">
+                    <a href="#">
+                        <h5 class="text-[16px] font-semibold tracking-tight text-slate-900">Zotac RTX 3060 Twin Edge OC
+                        </h5>
+                    </a>
+                    <div class=" text-center">
+                        <h2>Zotac</h2>
+                    </div>
+                    <div class="pt-2 items-center flex justify-center ">
+                        <p class="text-3xl font-bold text-slate-900">
+                            $249
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="relative m-10 max-w-xs overflow-hidden  bg-white border border-transparent hover:border-[#848484] hover:shadow-md transition duration-300">
+                <a routerLink="product" class="group block overflow-hidden">
+                    <!-- <img class="h-1/2 rounded-t-lg object-cover"
+                        src="https://easypc.com.ph/cdn/shop/products/4026-a_540x.jpg?v=1629741818"
+                        alt="product image" /> -->
+                    <div class="relative h-[150px] sm:h-[250px] m-2">
+                        <img src="https://static.gigabyte.com/StaticFile/Image/Global/bba09e7eb981846fc5e12056bbec746f/Product/23236/webp/1000"
+                            alt=""
+                            class="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0" />
+                        <img src="https://static.gigabyte.com/StaticFile/Image/Global/d12407d8fdb5dd3859406b2def892bf5/Product/22288/webp/1000"
+                            alt=""
+                            class="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100" />
+                    </div>
+                </a>
+                <div class="mt-4 px-5 pb-5 font-['Inter'] text-center">
+                    <a href="#">
+                        <h5 class="text-[16px] font-semibold tracking-tight text-slate-900">Zotac RTX 3060 Twin Edge OC
+                        </h5>
+                    </a>
+                    <div class=" text-center">
+                        <h2>Zotac</h2>
+                    </div>
+                    <div class="pt-2 items-center flex justify-center ">
+                        <p class="text-3xl font-bold text-slate-900">
+                            $249
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="relative m-10 max-w-xs overflow-hidden  bg-white border border-transparent hover:border-[#848484] hover:shadow-md transition duration-300">
+                <a routerLink="product" class="group block overflow-hidden">
+                    <!-- <img class="h-1/2 rounded-t-lg object-cover"
+                        src="https://easypc.com.ph/cdn/shop/products/4026-a_540x.jpg?v=1629741818"
+                        alt="product image" /> -->
+                    <div class="relative h-[150px] sm:h-[250px] m-2">
+                        <img src="https://static.gigabyte.com/StaticFile/Image/Global/dc0d8f565c7bfe47a714660161c9bce9/Product/23177/png/500"
+                            alt=""
+                            class="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0" />
+                        <img src="https://static.gigabyte.com/StaticFile/Image/Global/ca5fc9ccf363ae7584670fde48cb5752/Product/22810/png/500"
+                            alt=""
+                            class="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100" />
+                    </div>
+                </a>
+                <div class="mt-4 px-5 pb-5 font-['Inter'] text-center">
+                    <a href="#">
+                        <h5 class="text-[16px] font-semibold tracking-tight text-slate-900">Zotac RTX 3060 Twin Edge OC
+                        </h5>
+                    </a>
+                    <div class=" text-center">
+                        <h2>Zotac</h2>
+                    </div>
+                    <div class="pt-2 items-center flex justify-center ">
+                        <p class="text-3xl font-bold text-slate-900">
+                            $249
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="relative m-10 max-w-xs overflow-hidden  bg-white border border-transparent hover:border-[#848484] hover:shadow-md transition duration-300">
+                <a routerLink="product" class="group block overflow-hidden">
+                    <!-- <img class="h-1/2 rounded-t-lg object-cover"
+                        src="https://easypc.com.ph/cdn/shop/products/4026-a_540x.jpg?v=1629741818"
+                        alt="product image" /> -->
+                    <div class="relative h-[150px] sm:h-[250px] m-2">
+                        <img src="https://www.gigabyte.com/WebPage/842/img/8.png"
+                            alt=""
+                            class="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0" />
+                        <img src="https://www.gigabyte.com/FileUpload/Global/WebPage/842/img/4.png"
+                            alt=""
+                            class="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100" />
+                    </div>
+                </a>
+                <div class="mt-4 px-5 pb-5 font-['Inter'] text-center">
+                    <a href="#">
+                        <h5 class="text-[16px] font-semibold tracking-tight text-slate-900">Zotac RTX 3060 Twin Edge OC
+                        </h5>
+                    </a>
+                    <div class=" text-center">
+                        <h2>Zotac</h2>
+                    </div>
+                    <div class="pt-2 items-center flex justify-center ">
+                        <p class="text-3xl font-bold text-slate-900">
+                            $249
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</div>
