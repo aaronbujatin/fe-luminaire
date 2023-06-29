@@ -48,6 +48,7 @@ export class HomeComponent implements OnInit{
   addToCart(product : Product){
     this.cart.user = this.user
     this.cart.product = product
+    this.cart.quantity = 1
     this.cartService.addToCart(this.cart).subscribe(
       (response) => {
         console.log(response);

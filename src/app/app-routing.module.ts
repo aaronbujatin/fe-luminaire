@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: "", component: HomeComponent, pathMatch: "full" },
   { path: "carousel", component: ProductCarouselComponent },
   { path: "cart", component: CartComponent},
-  { path: "reg", component: RegisterComponent },
+  { path: "signup", component: RegisterComponent },
   { path: "login", component: LoginComponent },
   {path : "forbidden", component : ForbiddenComponent}
 

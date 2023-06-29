@@ -52,4 +52,12 @@ export class UserService {
     return this.getToken();
   }
 
+  public getUserDetails(){
+    const token = localStorage.getItem("jwtToken");
+
+    const headers = new HttpHeaders().set("Authorization", `Bearer ${token}`);
+
+    return this.httpClient.get(`${this.userApi}/api/v1/users`, {headers});
+  }
+
 }
