@@ -49,7 +49,7 @@
                                 </div>
                             </div>
 
-                            <button class="text-gray-600 transition hover:text-red-600">
+                            <button class="text-gray-600 transition hover:text-red-600"  (click)="deleteProductFromCart(product.id)">
                                 <span class="sr-only">Remove item</span>
 
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -68,24 +68,16 @@
                 <div class="mt-8 flex justify-end border-t border-gray-100 pt-8">
                     <div class="w-screen max-w-lg space-y-4">
                         <dl class="space-y-0.5 text-sm text-gray-700">
-                            <div class="flex justify-between">
-                                <dt>Subtotal</dt>
-                                <dd>£250</dd>
-                            </div>
-
-                            <div class="flex justify-between">
-                                <dt>VAT</dt>
-                                <dd>£25</dd>
-                            </div>
+                            
                             <div class="flex justify-between !text-base font-medium">
                                 <dt>Total</dt>
-                                <dd [(ngModel)]="total" (ngModelChange)="grandTotal" >{{total}}</dd>
+                                <dd [(ngModel)]="grandTotal" (ngModelChange)="calculateTotalProducts()">{{grandTotal | currency : "Php "}}</dd>
                             </div>
                         </dl>
 
 
                         <div class="flex justify-end">
-                            <a href="#"
+                            <a routerLink="/checkout"
                                 class="block rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600">
                                 Continue
                             </a>

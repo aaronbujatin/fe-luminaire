@@ -31,9 +31,10 @@ export class CartService {
     return this.httpClient.post(this.url + "/decrement", cart)
   }
   
-
+  public deletProduct(cart : number) {
+    return this.httpClient.delete(this.url + `/${cart}`);
+  }
  
-
   public getCartDetails(){
     return this.httpClient.get(this.url);
   }

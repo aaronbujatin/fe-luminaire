@@ -17,6 +17,7 @@ import { AuthGuard } from './security/auth.guard';
 import { AuthInterceptor } from './security/auth-interceptor';
 import { UserService } from './service/user.service';
 import { ForbiddenComponent } from './component/forbidden/forbidden.component';
+import { CheckoutComponent } from './component/checkout/checkout.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { ForbiddenComponent } from './component/forbidden/forbidden.component';
     LoginComponent,
     RegisterComponent,
     ForbiddenComponent,
+    CheckoutComponent,
     
   ],
   imports: [

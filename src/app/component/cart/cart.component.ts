@@ -17,35 +17,29 @@ export class CartComponent implements OnInit {
   public productInCart = []
 
   ngOnInit(): void {
-    this.fetchProduct()  
-    this.total
+    this.fetchProduct()
 
   }
 
-  grandTotal = this.getGrandTotal()
 
-  total : number = 0
-  getGrandTotal() {
-    
-    for (const cartItem of this.carts) {
-     
-      const productTotal = cartItem.total; 
-     
-      this.total += productTotal;
-    }
-    console.log(this.total);
-    return this.total;
- 
-    
+
+  grandTotal: number = 0
+  total: number = 0
+
+
+  calculateTotalProducts(): void {
+    this.grandTotal = 0;
+    this.fetchProduct
+    this.carts.forEach((cartItem) => {
+      this.grandTotal += cartItem.total;
+    });
   }
 
   incrementQuantity(cart: Cart) {
     this.cartService.incrementQuantity(cart).subscribe(
       (response) => {
-        
         this.fetchProduct()
-        this.getGrandTotal()
-   
+        this.calculateTotalProducts
       }, (error) => {
         console.log(error);
       }
@@ -55,10 +49,8 @@ export class CartComponent implements OnInit {
   decrementQuantity(cart: Cart) {
     this.cartService.decrementQuantity(cart).subscribe(
       (response) => {
-        this.getGrandTotal()
         this.fetchProduct()
-        
-      
+        this.calculateTotalProducts
       }, (error) => {
         console.log(error);
       }
@@ -69,9 +61,25 @@ export class CartComponent implements OnInit {
     this.cartService.getCartDetails().subscribe(
       (response: Cart[]) => {
         this.carts = response
+        this.calculateTotalProducts()
         console.log(this.carts);
+        console.log(this.grandTotal);
+
+
       }, (error) => {
         console.log(error);
+      }
+    )
+  }
+
+  public deleteProductFromCart(cart: number) {
+    this.cartService.deletProduct(cart).subscribe(
+      (response) => {
+        console.log(response);
+        this.fetchProduct();
+      }, (error) => {
+        console.log(error);
+        this.fetchProduct()
       }
     )
   }

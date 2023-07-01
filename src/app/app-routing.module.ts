@@ -7,6 +7,7 @@ import { RegisterComponent } from './component/register/register.component';
 import { LoginComponent } from './component/login/login.component';
 import { ForbiddenComponent } from './component/forbidden/forbidden.component';
 import { AuthGuard } from './security/auth.guard';
+import { CheckoutComponent } from './component/checkout/checkout.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent, pathMatch: "full" },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: "cart", component: CartComponent},
   { path: "signup", component: RegisterComponent },
   { path: "login", component: LoginComponent },
-  {path : "forbidden", component : ForbiddenComponent}
+  {path : "forbidden", component : ForbiddenComponent},
+  { path: "checkout", component : CheckoutComponent}
 
 ];
 
