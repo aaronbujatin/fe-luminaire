@@ -18,6 +18,9 @@ import { AuthInterceptor } from './security/auth-interceptor';
 import { UserService } from './service/user.service';
 import { ForbiddenComponent } from './component/forbidden/forbidden.component';
 import { CheckoutComponent } from './component/checkout/checkout.component';
+import {ToastrModule} from 'ngx-toastr';
+import { CartService } from './service/cart.service';
+
 
 
 @NgModule({
@@ -32,7 +35,7 @@ import { CheckoutComponent } from './component/checkout/checkout.component';
     RegisterComponent,
     ForbiddenComponent,
     CheckoutComponent,
-    
+
   ],
   imports: [
     BrowserModule,
@@ -40,17 +43,22 @@ import { CheckoutComponent } from './component/checkout/checkout.component';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    ToastrModule.forRoot(
+      {}
+    )
+  
 
 
   ],
   providers: [
     AuthGuard, {
-      provide : HTTP_INTERCEPTORS,
-      useClass : AuthInterceptor,
-      multi : true
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
     },
-    UserService
+    UserService,
+    CartService
   ],
   bootstrap: [AppComponent]
 })

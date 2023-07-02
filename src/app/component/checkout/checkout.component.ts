@@ -5,6 +5,7 @@ import { OrderInput } from 'src/app/model/order-input.model';
 import { CartService } from 'src/app/service/cart.service';
 import { OrderQuantity } from './../../model/order-quantity.model';
 import { OrderService } from 'src/app/service/order.service';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-checkout',
@@ -13,7 +14,7 @@ import { OrderService } from 'src/app/service/order.service';
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor(private cartService: CartService, private orderService: OrderService) { }
+  constructor(private cartService: CartService, private orderService: OrderService, private toast : NgToastService) { }
 
   ngOnInit(): void {
     this.fetchProduct()
@@ -74,10 +75,14 @@ export class CheckoutComponent implements OnInit {
 
       }
     )
-
+    
 
   }
 
+  test() {
+    
+  }
 
+  
 
 }

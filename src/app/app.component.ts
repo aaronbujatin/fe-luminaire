@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Modal } from 'flowbite';
-import { Carousel, Dropdown, initTE, Ripple} from 'tw-elements'
+import { Carousel, Dropdown, initTE, Ripple } from 'tw-elements'
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,6 @@ import { Carousel, Dropdown, initTE, Ripple} from 'tw-elements'
 export class AppComponent {
   title = 'frontend';
   ngOnInit() {
-    initTE({ Carousel, Dropdown,Modal, Ripple,
-      initTE, });
+    initTE({ Carousel, Dropdown, Modal, Ripple, initTE, });
   }
 }

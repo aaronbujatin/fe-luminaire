@@ -8,5 +8,5 @@ module.exports = {
     extend: {},
   },
   darkMode: "class",
-  plugins: [require("tw-elements/dist/plugin.cjs", '@tailwindcss/line-clamp')]
+  plugins: [require("tw-elements/dist/plugin.cjs")]
 }

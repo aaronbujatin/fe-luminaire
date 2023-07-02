@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { User } from '../model/user.model';
 import { Product } from '../model/product.model';
 import { Cart } from '../model/cart.model';
@@ -17,7 +17,7 @@ export class CartService {
   public cartItemList : any = []
   public productList = new BehaviorSubject<any>([]);
 
-
+  public carts: Cart[] = []
   addToCart(cart : Cart){
     return this.httpClient.post(this.url, cart);
 
@@ -35,8 +35,32 @@ export class CartService {
     return this.httpClient.delete(this.url + `/${cart}`);
   }
  
-  public getCartDetails(){
+  private cartSizeSubject = new BehaviorSubject<number>(0);
+  cartSize$ = this.cartSizeSubject.asObservable();
+
+
+  public getCartDetails() {
+    
     return this.httpClient.get(this.url);
+  }
+
+
+
+  cartSize: number = 0;
+
+  setCartSize(size: number) {
+    this.cartSize = size;
+  }
+
+  getCartSize() {
+    return this.cartSize
+  }
+
+  private buttonClickedSubject = new Subject<void>();
+  buttonClicked$ = this.buttonClickedSubject.asObservable();
+
+  triggerButtonClick(): void {
+    this.buttonClickedSubject.next();
   }
 
 }
