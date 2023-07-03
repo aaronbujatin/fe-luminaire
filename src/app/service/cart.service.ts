@@ -40,7 +40,6 @@ export class CartService {
 
 
   public getCartDetails() {
-    
     return this.httpClient.get(this.url);
   }
 

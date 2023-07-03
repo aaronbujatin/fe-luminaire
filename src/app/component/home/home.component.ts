@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit{
   
   productList : any;
   ngOnInit(): void {
-    this.fetchProduct()
     this.getAllProducts();
    
   }
