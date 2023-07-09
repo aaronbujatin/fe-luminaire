@@ -6,7 +6,6 @@ import { HomeComponent } from './component/home/home.component';
 import { HeaderComponent } from './component/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './component/footer/footer.component';
-import { ProductCarouselComponent } from './component/product-carousel/product-carousel.component';
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './component/cart/cart.component';
@@ -20,6 +19,8 @@ import { ForbiddenComponent } from './component/forbidden/forbidden.component';
 import { CheckoutComponent } from './component/checkout/checkout.component';
 import {ToastrModule} from 'ngx-toastr';
 import { CartService } from './service/cart.service';
+import { OrderHistoryComponent } from './component/order-history/order-history.component';
+
 
 
 
@@ -29,12 +30,13 @@ import { CartService } from './service/cart.service';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    ProductCarouselComponent,
     CartComponent,
     LoginComponent,
     RegisterComponent,
     ForbiddenComponent,
     CheckoutComponent,
+    OrderHistoryComponent,
+    
 
   ],
   imports: [

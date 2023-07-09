@@ -17,7 +17,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(private cartService: CartService,
     private userService: UserService,
-    private router: Router) { }
+    private router: Router,
+    ) { }
 
   public carts: Cart[] = []
 
@@ -26,7 +27,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log(this.isAuthenticated());
+
 
     this.isAuthenticated();
     this.cartService.buttonClicked$.subscribe(() => {
@@ -51,7 +52,7 @@ export class HeaderComponent implements OnInit {
         this.getCartsItem();
         this.cartsItemLoaded = true;
       }
-
+    
       return true;
     } else {
       return false;
@@ -77,7 +78,7 @@ export class HeaderComponent implements OnInit {
       (response: Cart[]) => {
         this.carts = response
         this.cartSize = this.carts.length
-        console.log(this.carts.length);
+        console.log(this.carts);
       }, (error) => {
         console.log(error);
       }

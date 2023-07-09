@@ -1,159 +1,144 @@
-
-<div class id="carouselExampleCaptions" class="relative h-[60vh]" data-te-carousel-init data-te-carousel-slide>
-    <!--Carousel indicators-->
-    <div class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
-        data-te-carousel-indicators>
-        <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="0" data-te-carousel-active
-            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-            aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="1"
-            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-            aria-label="Slide 2"></button>
-        <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="2"
-            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-            aria-label="Slide 3"></button>
+<div>
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative overflow-hidden rounded-lg md:h-[50rem]">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://en.colorful.cn/en/content/upload/form/69/202212/100a5861-e0ed-4c63-a3cf-51fcf5743054.png"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://en.colorful.cn/en/content/upload/form/69/202212/799e5004-ec4d-450d-a649-f522c9b6a76c.jpg"
+                    class="absolute block w-full object-bottom -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    alt="...">
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://en.colorful.cn/en/content/upload/form/69/202303/3c7c933e-7edc-407e-a977-c8d1dfd617f7.jpg"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://en.colorful.cn/en/content/upload/form/69/202303/42934ca4-3c60-4124-83dc-7370b8584749.jpg"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://en.colorful.cn/en/content/upload/form/69/202305/6a2f772e-5b99-47f1-a701-cc502928c908.webp"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                data-carousel-slide-to="4"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+            <span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button"
+            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
     </div>
 
-    <!--Carousel items-->
-    <div class="relative w-full overflow-hidden after:clear-both after:block after:content-[''] h-full">
-        <!--First item-->
-        <div class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-            data-te-carousel-active data-te-carousel-item style="backface-visibility: hidden">
-            <img src="https://cdn.shopify.com/s/files/1/0355/8296/7943/files/Minisforum-UM773-Lite_ECOM-SLIDING-BANNER_6c866118-d71c-4fdf-9635-52f8e715c5c0_1800x.jpg?v=1683351354"
-                class="block w-full object-fill" alt="..." />
-            <!-- <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-                <h5 class="text-xl">First slide label</h5>
-                <p>
-                    Some representative placeholder content for the first slide.
-                </p>
-            </div> -->
-        </div>
-        <!--Second item-->
-        <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-            data-te-carousel-item style="backface-visibility: hidden">
-            <img src="https://cdn.shopify.com/s/files/1/0355/8296/7943/files/0-02-06-a8e6550d7be730e2af09292a3e7ac50bd6cefd9c9a9ce8177436e83acfd26265_3a1459a9f2fac788_1600x.jpg?v=1683190657"
-                class="block w-full" alt="..." />
-            <!-- <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-                <h5 class="text-xl">Second slide label</h5>
-                <p>
-                    Some representative placeholder content for the second slide.
-                </p>
-            </div> -->
-        </div>
-        <!--Third item-->
-        <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-            data-te-carousel-item style="backface-visibility: hidden">
-            <img src="https://cdn.shopify.com/s/files/1/0355/8296/7943/files/AKKOECOM-SLIDING-BANNER_1800x.jpg?v=1682661939"
-                class="block w-full" alt="..." />
-            <!-- <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-                <h5 class="text-xl">Third slide label</h5>
-                <p>
-                    Some representative placeholder content for the third slide.
-                </p>
-            </div> -->
-        </div>
-    </div>
-
-    <!--Carousel controls - prev item-->
-    <button
-        class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-        type="button" data-te-target="#carouselExampleCaptions" data-te-slide="prev">
-        <span class="inline-block h-8 w-8">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="h-6 w-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-            </svg>
-        </span>
-        <span
-            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
-    </button>
-    <!--Carousel controls - next item-->
-    <button
-        class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-        type="button" data-te-target="#carouselExampleCaptions" data-te-slide="next">
-        <span class="inline-block h-8 w-8">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="h-6 w-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-            </svg>
-        </span>
-        <span
-            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
-    </button>
-</div>
-<div class="my-4">
-    <div class="container flex justify-center mx-auto">
-        <div>
-            <h1 class="text-center mt-5">New Arrivals</h1>
-            <app-product-carousel></app-product-carousel>
-            <app-product-carousel></app-product-carousel>
-            <app-product-carousel></app-product-carousel>
-            <app-product-carousel></app-product-carousel>
-            <div class="grid grid-cols-2 gap-1 md:grid-cols-5">
-                <div *ngFor="let product of products"
-                    class="relative m-10 h-[80%] w-60  bg-white border border-transparent hover:border-[#848484] hover:shadow-md transition duration-300">
-                    <a routerLink="product" class="group block overflow-hidden">
-                        <!-- <img class="h-1/2 rounded-t-lg object-cover"
-                        src="https://easypc.com.ph/cdn/shop/products/4026-a_540x.jpg?v=1629741818"
-                        alt="product image" /> -->
-                        <div class="relative h-[120px] sm:h-[200px] m-2 bg-[#F6F6F6]">
-                            <img src="{{product.imageUrl[0]}}" alt=""
-                                class="absolute inset-0 h-full w-full object-contain opacity-100 group-hover:opacity-0 transition duration-500 ease-ease-in-out" />
-                            <img src="{{product.imageUrl[1]}}" alt=""
-                                class="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition duration-500 ease-ease-in-out" />
-                        </div>
-                    </a>
-                    <div class="px-3 pb-5 font-['Arial'] text-center">
-                        <a href="#">
-                            <div class=" max-w-sm p-2">
-                                <p class="text-[16px] font-semibold text-blue-600 tracking-tight max-w-sm line-clamp-1">
-                                    {{product.name}}
-                                </p>
+    <div class="my-4">
+        <div class="container flex justify-center mx-auto">
+            <div>
+                <h1 class="text-center mt-5">New Arrivals</h1>
+               
+                <div class="grid grid-cols-2 gap-1 md:grid-cols-5">
+                    <div *ngFor="let product of products"
+                        class="relative m-10 h-[80%] w-60  bg-white border border-transparent hover:border-[#848484] hover:shadow-md transition duration-300">
+                        <a routerLink="product" class="group block overflow-hidden">
+                            <div class="relative h-[120px] sm:h-[200px] m-2 bg-[#F6F6F6]">
+                                <img src="{{product.imageUrl[0]}}" alt=""
+                                    class="absolute inset-0 h-full w-full object-contain opacity-100 group-hover:opacity-0 transition duration-500 ease-ease-in-out" />
+                                <img src="{{product.imageUrl[1]}}" alt=""
+                                    class="absolute inset-0 h-full w-full object-cover opacity-0 group-hover:opacity-100 transition duration-500 ease-ease-in-out" />
                             </div>
                         </a>
-                        <div class="text-gray-600 pb-2 text-center">
+                        <div class="px-3 pb-5 font-['Arial'] text-center">
+                            <a href="#">
+                                <div class=" max-w-sm p-2">
+                                    <p
+                                        class="text-[16px] font-semibold text-blue-600 tracking-tight max-w-sm line-clamp-1">
+                                        {{product.name}}
+                                    </p>
+                                </div>
+                            </a>
+                            <div class="text-gray-600 pb-2 text-center">
 
-                            <h2>{{product.brand}}</h2>
-                        </div>
-                        <div class="items-center flex justify-between font-['Arial']">
-                            <p class="text-[16px] font-semibold text-[#3A3A3A]">
-                                {{product.price | currency : 'Php '}}
-                            </p>
-                            <div class="flex gap-1 ">
-                                <div>
-                                    <a class="" href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="w-7 h-7 bg-gray-300 rounded-full p-1 hover:bg-[#FED700] text-[#3A3A3A] cursor-pointer"
-                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                <h2>{{product.brand}}</h2>
+                            </div>
+                            <div class="items-center flex justify-between font-['Arial']">
+                                <p class="text-[16px] font-semibold text-[#3A3A3A]">
+                                    {{product.price | currency : 'Php '}}
+                                </p>
+                                <div class="flex gap-1 ">
+                                    <div>
+                                        <a class="" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="w-7 h-7 bg-gray-300 rounded-full p-1 hover:bg-[#FED700] text-[#3A3A3A] cursor-pointer"
+                                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-7 h-7 bg-gray-300 rounded-full p-1 text-[#3A3A3A] hover:bg-[#FED700] cursor-pointer">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                         </svg>
-                                    </a>
-                                </div>
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
-                                        class="w-7 h-7 bg-gray-300 rounded-full p-1 text-[#3A3A3A] hover:bg-[#FED700] cursor-pointer">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
-                                        class="w-7 h-7 hover:bg-[#FED700] bg-gray-300 rounded-full p-1 text-[#3A3A3A] cursor-pointer" (click)="addToCart(product)" (click)="onClick()">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                                    </svg>
+                                    </div>
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="w-7 h-7 hover:bg-[#FED700] bg-gray-300 rounded-full p-1 text-[#3A3A3A] cursor-pointer"
+                                            (click)="addToCart(product)" (click)="onClick()">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
+    
 </div>

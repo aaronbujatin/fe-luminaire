@@ -1,32 +1,26 @@
-<div class="grid h-screen place-items-center">
-    <form class="w-full max-w-4xl items-center bg-[#F9FAFB] p-8" #orderForm="ngForm" (submit)="placeOrder()">
+<div class="grid h-[90vh] place-items-center bg-[#F9FAFB]">
+    <form class="w-full max-w-4xl items-center bg-white p-8" #orderForm="ngForm" (submit)="placeOrder()">
         <h1 class="py-2 my-3">Shipping information</h1>
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="name">
-                    Name
-                </label>
+               
                 <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                    class="appearance-none block w-full  text-gray-900 border border-black py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                     id="name" type="text" placeholder="Enter name" [(ngModel)]="orderInput.name" name="name">
-                <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+                <!-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> -->
             </div>
             <div class="w-full md:w-1/2 px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="phone">
-                    Phone
-                </label>
+                
                 <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    class="appearance-none block w-full  text-gray-900 border border-black   py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="phone" type="text" placeholder="Enter phone" [(ngModel)]="orderInput.phone" name="phone">
             </div>
         </div>
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="address">
-                    Address
-                </label>
+               
                 <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    class="appearance-none block w-full  text-gray-900 border border-black   py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="address" type="text" placeholder="Enter address" [(ngModel)]="orderInput.address"
                     name="address">
                 <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
@@ -34,22 +28,20 @@
         </div>
         <div class="flex flex-wrap -mx-3 mb-2">
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="city">
-                    City
-                </label>
+                
                 <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    class="appearance-none block w-full  text-gray-900 border border-black   py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="city" type="text" placeholder="Enter city" [(ngModel)]="orderInput.city" name="city">
             </div>
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="state">
-                    State
-                </label>
+                
                 <div class="relative">
                     <select
-                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="state" type="text" placeholder="Enter state" [(ngModel)]="orderInput.state" name="state">
-                        <option>New Mexico</option>
+                        class="block appearance-none w-full   text-gray-900 border border-black  py-3 px-4 pr-8  leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        id="state" type="text"  data-te-select-placeholder="Example placeholder" data-te-select-init  
+                        [(ngModel)]="orderInput.state" name="state">
+                        <option value="" disabled selected>Select state</option>
+                        <option >New Mexico</option>
                         <option>Missouri</option>
                         <option>Texas</option>
                     </select>
@@ -61,11 +53,9 @@
                 </div>
             </div>
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="postalCode">
-                    Postal code
-                </label>
+                
                 <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    class="appearance-none block w-full  text-gray-900 border border-black   py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="postalCode" type="text" placeholder="Enter Postal code" [(ngModel)]="orderInput.postalCode"
                     name="postalCode">
             </div>
@@ -74,11 +64,9 @@
         <h1 class="py-2 my-3 mt-3">Payment information</h1>
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="cardNumber">
-                    Card number
-                </label>
+               
                 <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    class="appearance-none block w-full  text-gray-900 border border-black   py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="cardNumber" type="text" placeholder="Enter card number" [(ngModel)]="orderInput.cardNumber"
                     name="cardNumber">
                 <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
@@ -88,27 +76,23 @@
 
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
 
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="expiryDate">
-                    Expiration date (MM/YY)
-                </label>
+               
                 <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                    class="appearance-none block w-full  text-gray-900 border border-black py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                     id="expiryDate" type="text" placeholder="Enter expiry date" [(ngModel)]="orderInput.expiryDate"
                     name="expiryDate">
                 <p class="text-red-500 text-xs italic">Please fill out this field.</p>
             </div>
             <div class="w-full md:w-1/2 px-3">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="cc">
-                    CC
-                </label>
+                
                 <input
-                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    class="appearance-none block w-full  text-gray-900 border border-black   py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="cc" type="text" placeholder="Enter cc" [(ngModel)]="orderInput.cc" name="cc">
             </div>
         </div>
         <div class="flex justify-end">
-            <button type="submit"  data-modal-target="defaultModal" data-modal-toggle="defaultModal"
-                class="block rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600">
+            <button type="submit" data-modal-target="defaultModal" data-modal-toggle="defaultModal"
+                class="block  bg-[#1D1D1F] px-5 py-3 text-sm text-gray-100 transition tracking-widest hover:text-gray-600">
                 Buy
             </button>
         </div>
@@ -116,29 +100,32 @@
 </div>
 
 
-<button type="button" (click)="test()">click</button>
+
+<button type="button" data-modal-target="defaultModal" data-modal-toggle="defaultModal">click</button>
 <!-- Main modal -->
 <div id="defaultModal" tabindex="-1" aria-hidden="true"
     class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full bg-gray-700 bg-opacity-90">
-    <div class="relative w-full max-w-2xl max-h-full">
+    <div class="relative w-full max-w-xl max-h-full mt-14">
         <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+        <div class="relative bg-white rounded shadow dark:bg-gray-700">
             <!-- Modal header -->
 
             <!-- Modal body -->
-            <div class="p-6 space-y-6">
-                <img src="assets/img/5.gif" alt="">
-                <div class="items-center text-center">
-                    <h1>Your order has been placed </h1>
-                </div>
+            <div class="p-6 space-y-6 mx-auto flex justify-center items-center">
+                <img src="assets/img/9.gif" class="h-1/2 w-1/2" alt="">
+                
             </div>
             <!-- Modal footer -->
+            <div class="items-center text-center">
+                <h1>Your order has been placed 🚀</h1>
+            </div>
             <div
                 class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600 mx-auto justify-center ">
+              
                 <button data-modal-hide="defaultModal" type="button"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Home</button>
+                    class="text-white bg-[#1D1D1F]  focus:ring-4 focus:outline-none font-medium text-sm px-5 py-2.5 text-center ">Home</button>
                 <button data-modal-hide="defaultModal" type="button"
-                    class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">My
+                    class="text-[#1D1D1F] bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 border border-gray-200 text-sm font-medium px-5 py-2.5 ">My
                     orders</button>
             </div>
         </div>
