@@ -17,9 +17,19 @@ import { AuthInterceptor } from './security/auth-interceptor';
 import { UserService } from './service/user.service';
 import { ForbiddenComponent } from './component/forbidden/forbidden.component';
 import { CheckoutComponent } from './component/checkout/checkout.component';
-import {ToastrModule} from 'ngx-toastr';
+import { ToastrModule } from 'ngx-toastr';
 import { CartService } from './service/cart.service';
 import { OrderHistoryComponent } from './component/order-history/order-history.component';
+import { CpuComponent } from './component/product-categories/cpu/cpu.component';
+import { CommonModule } from '@angular/common';
+import { CaseComponent } from './component/product-categories/case/case.component';
+import { CpuCoolingComponent } from './component/product-categories/cpu-cooling/cpu-cooling.component';
+import { GraphicsCardComponent } from './component/product-categories/graphics-card/graphics-card.component';
+import { HardDiskComponent } from './component/product-categories/hard-disk/hard-disk.component';
+import { MotherboardComponent } from './component/product-categories/motherboard/motherboard.component';
+import { PowerSupplyComponent } from './component/product-categories/power-supply/power-supply.component';
+import { SsdComponent } from './component/product-categories/ssd/ssd.component';
+import { RamComponent } from './component/product-categories/ram/ram.component';
 
 
 
@@ -36,7 +46,17 @@ import { OrderHistoryComponent } from './component/order-history/order-history.c
     ForbiddenComponent,
     CheckoutComponent,
     OrderHistoryComponent,
-    
+    CpuComponent,
+    CaseComponent,
+    CpuCoolingComponent,
+    GraphicsCardComponent,
+    HardDiskComponent,
+    MotherboardComponent,
+    PowerSupplyComponent,
+    SsdComponent,
+    RamComponent
+
+
 
   ],
   imports: [
@@ -46,10 +66,11 @@ import { OrderHistoryComponent } from './component/order-history/order-history.c
     HttpClientModule,
     FormsModule,
     RouterModule,
+    CommonModule,
     ToastrModule.forRoot(
       {}
     )
-  
+
 
 
   ],
