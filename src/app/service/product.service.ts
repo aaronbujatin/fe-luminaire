@@ -17,5 +17,9 @@ export class ProductService {
     return this.httpClient.get<any>(`${this.apiServiceUrl}/api/v1/products`);
   }
 
+  public getAllProductByCategory(category : string) {
+    return this.httpClient.get(`${this.apiServiceUrl}/api/v1/products/category/${category}`)
+  }
+
   
 }

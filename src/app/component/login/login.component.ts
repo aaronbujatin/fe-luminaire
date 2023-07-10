@@ -21,12 +21,23 @@ export class LoginComponent {
         console.log(this.login)
         console.log(response.accessToken);
         this.userService.setToken(response.accessToken);
-        this.router.navigate([""]);
+        this.navigateToPage()
+        this.router.navigate([''])
+  .then(() => {
+    window.location.reload();
+  });
       },(error : HttpErrorResponse) => {
         console.log(error);
         
       }
     )
+  }
+
+  navigateToPage(): void {
+    const url = "";
+    this.router.navigateByUrl(url, { skipLocationChange: true }).then(() => {
+      this.router.navigate([url]);
+    });
   }
 
 

@@ -15,7 +15,6 @@ import { RouterModule } from '@angular/router';
 import { AuthGuard } from './security/auth.guard';
 import { AuthInterceptor } from './security/auth-interceptor';
 import { UserService } from './service/user.service';
-import { ForbiddenComponent } from './component/forbidden/forbidden.component';
 import { CheckoutComponent } from './component/checkout/checkout.component';
 import { ToastrModule } from 'ngx-toastr';
 import { CartService } from './service/cart.service';
@@ -43,7 +42,6 @@ import { RamComponent } from './component/product-categories/ram/ram.component';
     CartComponent,
     LoginComponent,
     RegisterComponent,
-    ForbiddenComponent,
     CheckoutComponent,
     OrderHistoryComponent,
     CpuComponent,
