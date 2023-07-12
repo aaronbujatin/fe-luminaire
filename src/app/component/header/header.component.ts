@@ -27,14 +27,15 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
 
-
+   
+    this.cartService.getCartSize().subscribe(size => {
+      this.cartSize = size;
+      console.log(this.cartSize);
+      
+    });
 
     this.isAuthenticated();
-    this.cartService.buttonClicked$.subscribe(() => {
-      // Handle the button click event here
-      this.getCartsItem();
-      // Perform additional actions as needed
-    });
+   
   }
 
 
@@ -79,6 +80,7 @@ export class HeaderComponent implements OnInit {
         this.carts = response
         this.cartSize = this.carts.length
         console.log(this.carts);
+       
       }, (error) => {
         console.log(error);
       }
@@ -99,9 +101,6 @@ export class HeaderComponent implements OnInit {
       this.subscription.unsubscribe();
     }
   }
-
-
-
 
 
 

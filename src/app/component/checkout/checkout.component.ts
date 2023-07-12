@@ -6,6 +6,7 @@ import { CartService } from 'src/app/service/cart.service';
 import { OrderQuantity } from './../../model/order-quantity.model';
 import { OrderService } from 'src/app/service/order.service';
 import { NgToastService } from 'ng-angular-popup';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -14,7 +15,7 @@ import { NgToastService } from 'ng-angular-popup';
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor(private cartService: CartService, private orderService: OrderService, private toast : NgToastService) { }
+  constructor(private cartService: CartService, private orderService: OrderService, private toast : NgToastService, private router: Router) { }
 
   ngOnInit(): void {
     this.fetchProduct()
@@ -68,8 +69,8 @@ export class CheckoutComponent implements OnInit {
   placeOrder() {
     this.orderService.placeOrder(this.orderInput).subscribe(
       (response) => {
-        console.log(response);
-
+        console.log("Order placed");
+        this.router.navigate(['order-success'])
       }, (error) => {
         console.log(error);
 

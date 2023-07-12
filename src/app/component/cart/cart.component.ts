@@ -18,7 +18,7 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchProduct()
-
+ 
   }
 
 
@@ -57,11 +57,26 @@ export class CartComponent implements OnInit {
     )
   }
 
+  cartSize : number
+
   fetchProduct() {
     this.cartService.getCartDetails().subscribe(
       (response: Cart[]) => {
         this.carts = response
         this.calculateTotalProducts()
+        this.cartSize = this.carts.length
+        this.cartService.getCartDetails().subscribe(
+          (response: Cart[]) => {
+            this.carts = response
+            this.cartSize = this.carts.length
+            console.log(this.cartSize);
+            this.cartService.updateCartSize(this.cartSize);
+            console.log(this.carts);
+            console.log(this.carts.length);
+          }, (error) => {
+            console.log(error);
+          }
+        )
         console.log(this.carts);
       }, (error) => {
         console.log(error);

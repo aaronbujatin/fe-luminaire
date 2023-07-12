@@ -6,7 +6,7 @@
 -->
 
 <section>
-    <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 font-['Lato']">
         <div class="mx-auto max-w-4xl">
             <header class="text-center">
                 <h1 class="text-xl font-bold text-gray-900 sm:text-3xl">Your Cart</h1>
@@ -18,18 +18,18 @@
                         <img src={{product.product.imageUrl[0]}} alt="" class="h-16 w-16 rounded object-cover" />
 
                         <div>
-                            <h3 class="text-sm text-gray-900">{{product.product.name}}</h3>
+                            <h3 class="text-lg font-bold text-gray-900">{{product.product.name}}</h3>
 
                             <dl class="mt-0.5 space-y-px text-[10px] text-gray-600">
                                 <div>
 
-                                    <dd class="inline">{{product.product.brand}}</dd>
+                                    <dd class="inline text-base">{{product.product.brand}}</dd>
                                   
                                 </div>
 
                                 <div>
 
-                                    <dd class="inline">{{product.product.price | currency : "Php "}}</dd>
+                                    <dd class="inline text-base">{{product.product.price | currency : "Php "}}</dd>
                                 </div>
                             </dl>
                         </div>
@@ -69,8 +69,8 @@
                     <div class="w-screen max-w-lg space-y-4">
                         <dl class="space-y-0.5 text-sm text-gray-700">
                             
-                            <div class="flex justify-between !text-base font-medium">
-                                <dt>Total</dt>
+                            <div class="flex justify-end !text-base font-medium">
+                                <dt class="font-bold text-black pr-10">Total </dt>
                                 <dd [(ngModel)]="grandTotal" (ngModelChange)="calculateTotalProducts()">{{grandTotal | currency : "Php "}}</dd>
                             </div>
                         </dl>
@@ -78,7 +78,7 @@
 
                         <div class="flex justify-end">
                             <a routerLink="/checkout"
-                                class="block rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600">
+                                class="block text-base font-semibold tracking-wider  bg-[#1D1D1F] hover:text-gray-500 text-white px-5 py-3 ">
                                 Continue
                             </a>
                         </div>

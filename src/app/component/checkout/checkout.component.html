@@ -1,5 +1,5 @@
-<div class="grid h-[90vh] place-items-center bg-[#F9FAFB]">
-    <form class="w-full max-w-4xl items-center bg-white p-8" #orderForm="ngForm" (submit)="placeOrder()">
+<div class="grid h-full place-items-center bg-[#F9FAFB]">
+    <form class="w-full max-w-4xl items-center bg-white p-8" #orderForm="ngForm" >
         <h1 class="py-2 my-3">Shipping information</h1>
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -91,7 +91,7 @@
             </div>
         </div>
         <div class="flex justify-end">
-            <button type="submit" data-modal-target="defaultModal" data-modal-toggle="defaultModal"
+            <button type="button" (click)="placeOrder()" data-modal-target="defaultModal" data-modal-toggle="defaultModal"
                 class="block  bg-[#1D1D1F] px-5 py-3 text-sm text-gray-100 transition tracking-widest hover:text-gray-600">
                 Buy
             </button>
@@ -101,16 +101,14 @@
 
 
 
-<button type="button" data-modal-target="defaultModal" data-modal-toggle="defaultModal">click</button>
+<!-- <button type="submit"  data-modal-target="defaultModal" data-modal-toggle="defaultModal">click</button> -->
 <!-- Main modal -->
 <div id="defaultModal" tabindex="-1" aria-hidden="true"
     class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full bg-gray-700 bg-opacity-90">
     <div class="relative w-full max-w-xl max-h-full mt-14">
         <!-- Modal content -->
         <div class="relative bg-white rounded shadow dark:bg-gray-700">
-            <!-- Modal header -->
-
-            <!-- Modal body -->
+         
             <div class="p-6 space-y-6 mx-auto flex justify-center items-center">
                 <img src="assets/img/9.gif" class="h-1/2 w-1/2" alt="">
                 
@@ -122,9 +120,9 @@
             <div
                 class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600 mx-auto justify-center ">
               
-                <button data-modal-hide="defaultModal" type="button"
+                <button data-modal-hide="defaultModal" type="button" routerLink="/"
                     class="text-white bg-[#1D1D1F]  focus:ring-4 focus:outline-none font-medium text-sm px-5 py-2.5 text-center ">Home</button>
-                <button data-modal-hide="defaultModal" type="button"
+                <button data-modal-hide="defaultModal" type="button" routerLink="/history"
                     class="text-[#1D1D1F] bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 border border-gray-200 text-sm font-medium px-5 py-2.5 ">My
                     orders</button>
             </div>

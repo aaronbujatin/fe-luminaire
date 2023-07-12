@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { User } from '../model/user.model';
 import { Product } from '../model/product.model';
 import { Cart } from '../model/cart.model';
@@ -43,23 +43,15 @@ export class CartService {
     return this.httpClient.get(this.url);
   }
 
-
-
-  cartSize: number = 0;
-
-  setCartSize(size: number) {
-    this.cartSize = size;
-  }
+  private cartSize = new BehaviorSubject<number>(0);
 
   getCartSize() {
-    return this.cartSize
+    return this.cartSize.asObservable();
   }
 
-  private buttonClickedSubject = new Subject<void>();
-  buttonClicked$ = this.buttonClickedSubject.asObservable();
-
-  triggerButtonClick(): void {
-    this.buttonClickedSubject.next();
+  updateCartSize(size: number) {
+    this.cartSize.next(size);
   }
+  
 
 }

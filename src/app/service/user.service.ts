@@ -17,7 +17,7 @@ export class UserService {
     { "No-Auth": "True" }
   );
 
-  public registerUser(user: User): Observable<User> {
+  public registerUser(user: FormData): Observable<User> {
     return this.httpClient.post<User>(`${this.userApi}/api/v1/auth/signup`, user);
   }
   // public registerUser2(user: User):Observable<any>  {

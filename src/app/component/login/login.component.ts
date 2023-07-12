@@ -1,5 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Login } from 'src/app/model/login.model';
 import { UserService } from 'src/app/service/user.service';
@@ -40,5 +41,6 @@ export class LoginComponent {
     });
   }
 
+  
 
 }

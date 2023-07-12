@@ -1,4 +1,4 @@
-<div class="h-[80vh] bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+<div class="h-full bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 class="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">
             Create account
@@ -14,7 +14,7 @@
 
     <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-            <form (submit)="register()" #registerForm="ngForm">
+            <form (submit)="onSubmit(registerForm)" #registerForm="ngForm">
                 <div>
                     
                     <div class="mt-1 relative rounded-md shadow-sm">
@@ -72,8 +72,17 @@
                 <div class="mt-6">
                    
                     <div class="mt-1 rounded-md shadow-sm">
-                        <input id="password_confirmation" name="password_confirmation" placeholder="Confirm password" type="password" required="" [(ngModel)]="password_confirmation"
+                        <input id="password_confirmation" name="password_confirmation" placeholder="Confirm password" type="password" required="" [(ngModel)]="password_confirmation" 
                             class="border-black border focus:outline-none text-gray-900 block w-full p-2.5 ">
+                    </div>
+                </div>
+                
+                <div class="mt-6">
+                   
+                    <div class="mt-1 rounded-md shadow-sm">
+                        <input id="password_confirmation" name="password_confirmation" placeholder="Confirm password" type="file" (change)="onFileSelected($event)" (change)="readURL($event)"
+                            class="border-black border focus:outline-none text-gray-900 block w-full p-2.5 ">
+                            <img id="blah" [src]="imageSrc || 'http://placehold.it/180'" alt="your image" class="h-36 w-36 mx-auto mt-2" />
                     </div>
                 </div>
 

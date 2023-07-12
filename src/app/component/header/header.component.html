@@ -60,7 +60,7 @@
                 <a href="" *ngIf="isAuthenticated()" id="dropdownMenuButton23" data-te-dropdown-toggle-ref
                     aria-expanded="false" data-te-ripple-init>
                     <div class="flex justify-between space-x-1">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKAXf2Ys6d6GqtWxyfhZqummV1_HB_vpZrYufV4tI&s" class="rounded-full h-8 w-8 " alt="">
+                        <img src="data:image/png;base64, {{user.image}}"  class="rounded-full h-8 w-8 " alt="user image">
                     <h1 class="pt-1">{{user?.username}}</h1>
                     </div>
                 </a>
