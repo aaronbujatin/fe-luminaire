@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Cart } from 'src/app/model/cart.model';
 import { Product } from 'src/app/model/product.model';
@@ -7,31 +8,37 @@ import { CartService } from 'src/app/service/cart.service';
 import { ProductService } from 'src/app/service/product.service';
 
 @Component({
-  selector: 'app-hard-disk',
-  templateUrl: './hard-disk.component.html'
+  selector: 'app-product-details',
+  templateUrl: './product-details.component.html'
 })
-export class HardDiskComponent {
+export class ProductDetailsComponent {
 
-  constructor(private productService : ProductService, private cartService : CartService,private toastr: ToastrService){}
+  constructor(private productService : ProductService, 
+    private router : Router, 
+    private route : ActivatedRoute, 
+    private cartService : CartService,
+    private toastr: ToastrService){}
 
-  products : Product []
+  ngOnInit() {
+    this.route.params.subscribe(params => this.getProductById(params['id']));
+    console.log(this.product);
+    
+  }
 
+  product : Product
 
-  ngOnInit(): void {
-      let category = "harddisk";
-      this.productService.getAllProductByCategory(category).subscribe(
-        (response : any) => {
-          this.products = response
-          console.log(response);
-        }, (error) => {
-          console.log(error);
-          
-        }
-      )
+  public getProductById(id:number) {
+    this.productService.getProductById(id).subscribe(
+      (response : Product) => {
+        this.product = response
+        console.log(this.product);
+      }, (error) => {
+        console.log(error);
+      }
+    )
   }
 
   user: User = new User;
-  product: Product = new Product
   cart: Cart = new Cart
   public carts: Cart[] = []
   cartSize : number
@@ -71,4 +78,5 @@ export class HardDiskComponent {
       positionClass: 'toast-bottom-left'
     });
   }
+
 }

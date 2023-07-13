@@ -30,6 +30,7 @@ import { PowerSupplyComponent } from './component/product-categories/power-suppl
 import { SsdComponent } from './component/product-categories/ssd/ssd.component';
 import { RamComponent } from './component/product-categories/ram/ram.component';
 import { OrderSuccessComponent } from './component/order-success/order-success.component';
+import { ProductDetailsComponent } from './component/product-details/product-details.component';
 
 
 
@@ -54,7 +55,8 @@ import { OrderSuccessComponent } from './component/order-success/order-success.c
     PowerSupplyComponent,
     SsdComponent,
     RamComponent,
-    OrderSuccessComponent
+    OrderSuccessComponent,
+    ProductDetailsComponent
 
 
 

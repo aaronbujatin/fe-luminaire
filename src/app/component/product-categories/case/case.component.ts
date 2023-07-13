@@ -8,8 +8,7 @@ import { ProductService } from 'src/app/service/product.service';
 
 @Component({
   selector: 'app-case',
-  templateUrl: './case.component.html',
-  styleUrls: ['./case.component.css']
+  templateUrl: './case.component.html'
 })
 export class CaseComponent implements  OnInit{
 

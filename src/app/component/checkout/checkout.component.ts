@@ -71,6 +71,7 @@ export class CheckoutComponent implements OnInit {
       (response) => {
         console.log("Order placed");
         this.router.navigate(['order-success'])
+        this.fetchProduct()
       }, (error) => {
         console.log(error);
 

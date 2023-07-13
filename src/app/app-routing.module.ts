@@ -16,6 +16,7 @@ import { PowerSupplyComponent } from './component/product-categories/power-suppl
 import { SsdComponent } from './component/product-categories/ssd/ssd.component';
 import { RamComponent } from './component/product-categories/ram/ram.component';
 import { OrderSuccessComponent } from './component/order-success/order-success.component';
+import { ProductDetailsComponent } from './component/product-details/product-details.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent, pathMatch: "full" },
@@ -33,7 +34,8 @@ const routes: Routes = [
   { path: "power-supply", component : PowerSupplyComponent},
   { path: "ssd", component : SsdComponent},
   { path: "ram", component : RamComponent},
-  { path :"order-success", component : OrderSuccessComponent}
+  { path :"order-success", component : OrderSuccessComponent},
+  { path :"product/:id", component : ProductDetailsComponent}
 
 ];
 

@@ -25,5 +25,9 @@ export class ProductService {
     return this.httpClient.get(`${this.apiServiceUrl}/api/v1/products/random`)
   }
 
+  public getProductById(id : number) {
+    return this.httpClient.get(`${this.apiServiceUrl}/api/v1/products/${id}`);
+  }
+
   
 }
